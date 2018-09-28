@@ -1,0 +1,24 @@
+{
+  "name": "rest-session-cache",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nohorjo/rest-session-cache.git"
+  },
+  "author": "Muhammed Haque",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nohorjo/rest-session-cache/issues"
+  },
+  "homepage": "https://github.com/nohorjo/rest-session-cache#readme",
+  "dependencies": {
+    "express": "4.16.3",
+    "otplib": "10.0.1",
+    "recursive-deep-merge": "nohorjo/recursive-deep-merge"
+  }
+}
