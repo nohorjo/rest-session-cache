@@ -13,7 +13,7 @@ const app = express();
 let sessionCache = {};
 
 app.use((req, resp, next) => {
-    if (authenticator.check(req.query,otp, process.env.SECRET)) {
+    if (authenticator.check(req.query.otp, process.env.SECRET)) {
         next();
     } else {
         console.warn('Unauthorised request', req.ip);
