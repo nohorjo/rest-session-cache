@@ -42,7 +42,7 @@ app.delete('/:sid', ({params:{sid}}, resp) => {
 });
 
 app.post('/:sid', ({params: {sid}, body: {next}}, resp) => {
-    next = JSON.parse(decrypt(next));
+    next = JSON.parse(decrypt(next), (_, v) => v == "__undefined" ? undefined : v);
     const old = sessionCache[sid];
     if (!old) {
         sessionCache[sid] = next;
