@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/:sid', ({params: {sid}}, resp) => {
-    resp.send(encrypt(JSON.stringify(sessionCache[sid])));
+    resp.send(encrypt(JSON.stringify(sessionCache[sid] || {})));
 });
 
 app.delete('/', (req, resp) => {
